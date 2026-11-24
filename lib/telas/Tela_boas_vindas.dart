@@ -88,11 +88,7 @@ class TelaBoasVindas extends StatelessWidget {
                   const Text(
                     'Entre no nosso aplicativo e tenha uma otima experiencia com nossos livros. ',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.orange,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(color: Colors.orange, fontSize: 15),
                   ),
 
                   const SizedBox(height: 30),
@@ -104,6 +100,13 @@ class TelaBoasVindas extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(50),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.orange.withValues(alpha: 0.8),
+                          blurRadius: 12,
+                          offset: const Offset(0, 0),
+                        ),
+                      ],
                     ),
 
                     child: IconButton(

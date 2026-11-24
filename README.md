@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # tabalho01
 
 A new Flutter project.
@@ -15,3 +16,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# projeto01
+>>>>>>> 394339799d75aec28b39406ab64bc0b5831c7225

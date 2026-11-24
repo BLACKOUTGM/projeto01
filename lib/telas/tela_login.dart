@@ -15,7 +15,7 @@ class TelaLogin extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
 
-        // Iremos criar um fundo degradê de cor azul
+        // Iremos criar um fundo degradê de cor laranja
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFFFFF3E0), Color(0xFFFFE0B2), Color(0xFFFFCC80)],
@@ -35,10 +35,10 @@ class TelaLogin extends StatelessWidget {
                     children: [
                       const Icon(
                         Icons.account_circle,
-                        size: 100,
+                        size: 150,
                         color: Colors.orange,
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 15),
 
                       const Text(
                         'Login',
@@ -68,11 +68,12 @@ class TelaLogin extends StatelessWidget {
                       const CampoSenha(),
 
                       const SizedBox(height: 10),
-
+                      //para colocar os weigets lado a lado
                       Row(
                         //espaçaento que distibui o espaço de forma igual
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          //para fazer o text em forma de butao
                           TextButton(
                             onPressed: () {},
 
