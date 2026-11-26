@@ -29,19 +29,12 @@ class TelaLogin extends StatelessWidget {
               padding: const EdgeInsets.all(24),
 
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Column(
                     children: [
-                      const Icon(
-                        Icons.account_circle,
-                        size: 150,
-                        color: Colors.orange,
-                      ),
-                      const SizedBox(height: 15),
-
                       const Text(
-                        'Login',
+                        'Bem Vindo de volta!',
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
@@ -51,9 +44,9 @@ class TelaLogin extends StatelessWidget {
                       const SizedBox(height: 8),
 
                       const Text(
-                        'Entre com seus dados para continuar',
+                        'Entre com sua conta para continuar sua leitura.',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 13, color: Colors.orange),
+                        style: TextStyle(fontSize: 16, color: Colors.orange),
                       ),
                       const SizedBox(height: 16),
 
@@ -69,43 +62,24 @@ class TelaLogin extends StatelessWidget {
 
                       const SizedBox(height: 10),
                       //para colocar os weigets lado a lado
-                      Row(
-                        //espaçaento que distibui o espaço de forma igual
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          //para fazer o text em forma de butao
-                          TextButton(
-                            onPressed: () {},
+                      Align(
+                        //para jogar o text buttom para direita
 
-                            child: const Text(
-                              'Esqueci a senha ',
-                              style: TextStyle(
-                                color: Colors.orange,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        alignment: Alignment.centerRight,
+
+                        //para fazer o text em forma de butao
+                        child: TextButton(
+                          onPressed: () {},
+
+                          child: const Text(
+                            'Esqueceu a senha? ',
+                            style: TextStyle(
+                              color: Colors.orange,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const TelaCadastro(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              'Criar conta',
-                              style: TextStyle(
-                                color: Colors.orange,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
 
                       const SizedBox(height: 20),
@@ -136,6 +110,32 @@ class TelaLogin extends StatelessWidget {
                             foregroundColor: Colors.white,
                           ),
                         ),
+                      ),
+
+                      const SizedBox(height: 10),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Não tem uma conta? '),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const TelaCadastro(),
+                                ),
+                              );
+                            },
+                            child: const Text(
+                              'Cadastre-se',
+                              style: TextStyle(
+                                color: Colors.orange,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

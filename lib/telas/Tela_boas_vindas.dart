@@ -26,7 +26,7 @@ class TelaBoasVindas extends StatelessWidget {
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(25),
               child: Column(
-                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
 
                 children: [
                   //icone com text lado a lado
@@ -49,25 +49,24 @@ class TelaBoasVindas extends StatelessWidget {
                   const SizedBox(height: 50),
 
                   Container(
-                    width: 150,
-                    height: 150,
+                    width: 200,
 
                     decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(50),
-
+                      color: const Color.fromARGB(255, 246, 235, 222),
+                      borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.orange,
-                          blurRadius: 30,
-                          offset: const Offset(1, 1),
+                          color: Colors.orange.withValues(alpha: 0.8),
+                          blurRadius: 12,
+                          offset: const Offset(0, 0),
                         ),
                       ],
                     ),
+
                     child: const Center(
                       child: Icon(
-                        Icons.waving_hand,
-                        size: 60,
+                        Icons.auto_stories_rounded,
+                        size: 100,
                         color: Colors.orange,
                       ),
                     ),
@@ -75,18 +74,18 @@ class TelaBoasVindas extends StatelessWidget {
                   const SizedBox(height: 30),
 
                   const Text(
-                    'seja bem vindo ao E-BOOK!',
+                    'Seu próximo universo \n em cada página.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.orange,
-                      fontSize: 32,
+                      fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   const SizedBox(height: 30),
 
                   const Text(
-                    'Entre no nosso aplicativo e tenha uma otima experiencia com nossos livros. ',
+                    ' Organize suas leituras e descubra novas histórias. ',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.orange, fontSize: 15),
                   ),
@@ -95,8 +94,8 @@ class TelaBoasVindas extends StatelessWidget {
 
                   //botao para avançar para tela de login
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 45,
+                    height: 45,
                     decoration: BoxDecoration(
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(50),
@@ -109,9 +108,11 @@ class TelaBoasVindas extends StatelessWidget {
                       ],
                     ),
 
-                    child: IconButton(
-                      icon: const Icon(Icons.login_rounded),
-                      color: Colors.white,
+                    child: TextButton(
+                      child: Text(
+                        'começar agora',
+                        style: TextStyle(color: Colors.white),
+                      ),
 
                       onPressed: () {
                         Navigator.push(

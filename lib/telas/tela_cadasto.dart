@@ -30,12 +30,6 @@ class TelaCadastro extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      const Icon(
-                        Icons.account_circle,
-                        size: 70,
-                        color: Colors.orange,
-                      ),
-
                       const Text(
                         'Criar Conta',
                         style: TextStyle(
@@ -44,10 +38,10 @@ class TelaCadastro extends StatelessWidget {
                           color: Colors.orange,
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 6),
 
                       const Text(
-                        'informe seus dados para fazer seu cadastro ',
+                        'informe seus dados para fazer sua conta ',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -64,7 +58,11 @@ class TelaCadastro extends StatelessWidget {
 
                       const SizedBox(height: 20),
 
-                      const CampoSenha(),
+                      const CampoTexto(
+                        titulo: 'Crie uma senha ',
+                        dica: '',
+                        icone: Icons.password,
+                      ),
 
                       const SizedBox(height: 20),
 
