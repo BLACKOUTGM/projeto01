@@ -52,7 +52,7 @@ class TelaBoasVindas extends StatelessWidget {
                     width: 200,
 
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 246, 235, 222),
+                      color: const Color.fromARGB(205, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
